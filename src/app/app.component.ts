@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: ` <app-task-scheduler></app-task-scheduler> `,
 })
-export class AppComponent {
-  title = 'web-components-with-angular';
-}
+export class AppComponent {}
