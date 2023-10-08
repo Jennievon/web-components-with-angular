@@ -1,7 +1,18 @@
 import { Component } from '@angular/core';
+import 'custom-task-web-component';
 
 @Component({
   selector: 'app-root',
-  template: ` <app-task-scheduler></app-task-scheduler> `,
+  template: `
+    <task-scheduler
+      title="My Angular Task Scheduler"
+      (addTask)="handleAddTask($event)"
+    ></task-scheduler>
+  `,
 })
-export class AppComponent {}
+export class AppComponent {
+  handleAddTask(event: any) {
+    const task = event.detail;
+    console.log('Task added:', task);
+  }
+}
